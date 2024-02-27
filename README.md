@@ -1,9 +1,9 @@
-# Sample Web3 Frontend project
+# Sample Crowdfunding Frontend project
 
 This project demonstrates a basic frontend app connected to local blockchain using Metamask.
 
 ### Before starting 
-install and run locally [web3-hardhat-example](https://github.com/Konstantin-Babushkin/web3-hardhat-example),
+install and run locally [crowdfunding-hardhat-example](https://github.com/Konstantin-Babushkin/web3-hardhat-example),
 
 ### After that run:
 

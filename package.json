@@ -1,5 +1,5 @@
 {
-    "name": "writeup-frontend-example",
+    "name": "crowdfunding-frontend-example",
     "version": "0.0.1",
     "type": "module",
     "scripts": {
@@ -19,7 +19,8 @@
         "react-dom": "^18.2.0",
         "react-feather": "^2.0.10",
         "react-i18next": "^14.0.1",
-        "react-router-dom": "^6.21.3"
+        "react-router-dom": "^6.21.3",
+        "react-toastify": "^10.0.4"
     },
     "devDependencies": {
         "@typechain/ethers-v5": "^11.1.2",
