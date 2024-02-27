@@ -23,7 +23,12 @@ export const PledgeButton = ({ myToken }: Props) => {
       // before transferring user's tokens, we need to ask for approval
       await myToken.approve(contract.address, amount)
       listenToContractEvent(provider, contract, 'Pledge')
-      await contract.pledge(BigNumber.from(chosenCampaignId), BigNumber.from(amount))
+
+      // create transaction
+      const tx = await contract.pledge(BigNumber.from(chosenCampaignId), BigNumber.from(amount))
+      // You should also pass number of confirms to `wait` (proves that transaction was included in the blockchain)
+      // We don't do it here because it's a local network
+      await tx.wait()
     } finally {
       setIsLoading(false)
     }

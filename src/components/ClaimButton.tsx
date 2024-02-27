@@ -13,7 +13,12 @@ export const ClaimButton = () => {
     try {
       setIsLoading(true)
       listenToContractEvent(provider, contract, 'Claim')
-      await contract.claim(BigNumber.from(chosenCampaignId))
+
+      // create transaction
+      const tx = await contract.claim(BigNumber.from(chosenCampaignId))
+      // You should also pass number of confirms to `wait` (proves that transaction was included in the blockchain)
+      // We don't do it here because it's a local network
+      await tx.wait()
     } finally {
       setIsLoading(false)
     }

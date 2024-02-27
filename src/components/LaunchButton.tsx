@@ -10,7 +10,7 @@ export const LaunchButton = () => {
   const [start, setStart] = useState<string | null>(null)
   const [end, setEnd] = useState<string | null>(null)
 
-  const dateToUint32 = (dateString: string) => {
+  const dateToBigNumber = (dateString: string) => {
     const date = new Date(dateString)
     const unixTimestamp = date.getTime() / 1000
     return BigNumber.from(Math.floor(unixTimestamp))
@@ -21,7 +21,16 @@ export const LaunchButton = () => {
     try {
       setIsLoading(true)
       listenToContractEvent(provider, contract, 'Launch')
-      await contract.launch(BigNumber.from(goal), dateToUint32(start), dateToUint32(end))
+
+      // create transaction
+      const tx = await contract.launch(
+        BigNumber.from(goal), // how many tokens are expected to raise - number
+        dateToBigNumber(start), // when campaign starts - timestamp
+        dateToBigNumber(end), // when campaign ends - timestamp
+      )
+      // You should also pass number of confirms to `wait` (proves that transaction was included in the blockchain)
+      // We don't do it here because it's a local network
+      await tx.wait()
     } finally {
       setIsLoading(false)
     }
