@@ -9,9 +9,7 @@
 This project demonstrates a basic frontend app connected to local blockchain using Metamask.
 
 ### Installation and local development:
-[//]: # TODO add links to repo
-
-(1) install and run locally [crowdfunding-hardhat-example](),
+(1) install and run locally [crowdfunding-hardhat-example](https://github.com/maddevsio/crowdfunding-hardhat-example),
 
 (2) make sure `LOCAL_CHAIN` config in `src/blockchainInfo/chainConfig.ts` corresponds to configs for `crowdfunding-hardhat-example` (e.g., `chainId` or `rpcUrls`). Otherwise, front-end app wouldn't be able to connect to the hardhat local node 
 
