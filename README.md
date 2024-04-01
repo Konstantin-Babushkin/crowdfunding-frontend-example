@@ -1,10 +1,8 @@
 # Sample Crowdfunding Front-end project
 [![Developed by Mad Devs](https://maddevs.io/badge-dark.svg)](https://maddevs.io/blockchain/)
 
-[//]: # TODO add links to writeup
-
 > [!NOTE]
-> This repository was developed as a practical example for an article [Challenges and Pitfalls for Beginner Front-End Blockchain Developers](url-to-writeup).
+> This repository was developed as a practical example for an article [Challenges and Pitfalls for Beginner Front-End Blockchain Developers](https://maddevs.io/writeups/challenges-for-beginner-front-end-blockchain-developers/).
 
 This project demonstrates a basic frontend app connected to local blockchain using Metamask.
 
